@@ -9,13 +9,88 @@ print("hello world")
 import math as ma
 a=ma.pi
 b=5
-#########Session 2############
+#######################################################################################################
+"""UNCOVERED PART """
+#print function
+#default paramtere aare print("string",sep=" ",end=/n)
+#so if we want to modify it we can
+print("Hello word","hello") #Hello word hello
+print("Hello word","hello",sep="/")  #Hello word/hello
+
+print("hello world")
+print("hello world") #after every print cursor moves to next line because by default end="/n"
+#so utput will be
+#hello world
+#hello world
+
+print("hello world",end="-")
+print("hello world")
+#now the output will be
+#hello world-hello world
+
+#RAW STRING
+print("Hello this is \n me")
+print(r"Hello this is \n me") #this is raw string it treats those special symbols also as sstring will print \n as it is
+#Integer
+#python supports upto 10^308 viz (1e308) number for boath float, integer type
+print(1e308) #1e+308
+print(1e309) #inf
+
+#same for float also
+print(1.6e308) #1.6e+308
+print(1.6e309) #inf
+
+# NOTE:  1.5e3 ====> 1.5 * 10^34
+
+
+#LIST (can be modified)
+#same like arrays in c, java
+print([1,2,3,4,5])
+
+#TUPLE (non modifiable)
+print((1,2,3,4,5))
+
+#SETS
+print({1,2,3,4,5})
+
+
+
+#VARIABLES
+#are typed dynamically in python means we didnr tell the variable type before in python
+#they are dynamicallty binded
+#means we can change value even typ also when needed
+a=5
+print(a)
+a="one"
+print(a)
+
+a,b,c=1,2,3
+print(a,b,c)
+
+a=b=c=5
+print(a,b,c)
+
+#KEywords - are special reserved names(for,if-else,print,etc.)
+#identfiers- variable names
+#we cant use keyword name for identifiers
+#cant inir=tialize identifier with number
+#only special chracter allowed for identifier is _
+
+
+
+#membership operators
+#in / not in      #so no need of loop
+print("D" in "Delhi") #True 
+#it works on other data types also like list,sets,etc
+
+#########Session 2#############################################################33
 """the input() function always take imput as string
 by default. 
 in order to convert it in to desired type we need to
 specify type   to convert it into. for example if we 
 want int then will take input as int(input()).this 
 will convert the string into int"""
+"""----> WHY PY do this? ---> because string is an universal type in type conversion menas we can convert it into any type and n any type can be converted to string without any data loss"""
 print(b)
 age=input("enter your age:")
 print(type(age))
@@ -37,10 +112,10 @@ print(age2)
 age=age1+age2
 print(age)
 print(type(age))
-'''TAKEAWAY: 
-    '''
 ######################################################
 #coverting to floats
+"""--> TYPE CONVERSION NOTE: python tries to stop data loss in type conversion. remmber the original data type is also preervde means it doesnt plays woth the original data
+during type converion it creates new memory for the new type we created """
 int_value=100
 string_value='1.5'
 float_value= float(int_value)
